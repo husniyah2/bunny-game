@@ -1,0 +1,55 @@
+
+//Fully functional code with a sample test case is given
+//the image was not clear so change the function names if need
+#include<iostream>
+using namespace std;
+
+float sum(float arr[],int n)//function for calculating sum
+{
+    float add=0;
+    for(int i=0;i<n;i++)
+    {
+        add+=arr[i];
+    }
+    return add;
+}
+
+float average(float arr[],int n)//function for calculating average
+{
+    return sum(arr,n)/n;
+}
+
+void printSum(float arr[],int n)//ffunction for printing average and sum
+{
+    cout<<"The sum is :"<<sum(arr,n)<<endl;
+    cout<<"The Average is :"<<average(arr,n)<<endl;
+}
+void DataItems(int n)//function for taking inputs i.e elements and value of n
+{    
+    cout<<"Enter Number of items";
+    cin>>n;
+    float arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    printSum(arr,n);
+}
+
+
+
+
+void computeAndPrintSum()//main function that is called to do operations
+{
+    int n;
+    DataItems(n);
+    
+}
+
+
+
+int main()
+{
+    computeAndPrintSum();
+}
+ 
